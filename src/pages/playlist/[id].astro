@@ -1,0 +1,95 @@
+---
+import { MusicsTable } from "@/components/MusicsTable.jsx";
+import Layout from "../../layouts/Layout.astro";
+import { allPlaylists, songs } from "@/lib/data";
+
+const { id } = Astro.params;
+const playlistId = id;
+
+const playlist = allPlaylists.find((playlist) => playlist.id === id);
+const playListSongs = songs.filter(
+  (song) => song.albumId === playlist?.albumId
+);
+---
+
+<Layout title="Spotify Clone">
+  <div
+    id="playlist-container"
+    class="relative flex flex-col h-full bg-zinc-900 overflow-x-hidden"
+    transition:name=`playlist ${id} box`
+  >
+    <!-- <PageHeader /> -->
+
+    <a
+      href="/"
+      aria-label="go back to home page"
+      class="bg-zinc-900 rounded-full inline-flex justify-center items-center h-8 w-8 mt-6 ml-6"
+      ><svg
+        viewBox="0 0 16 16"
+        class="h-4 w-4 -ml-0.5"
+        astro-icon="bi:chevron-left"
+        ><path
+          fill="currentColor"
+          fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+        ></path></svg
+      >
+    </a>
+    <header class="flex flex-row gap-8 mt-6">
+      <div></div>
+      <picture class="aspect-square w-64 h-64 flex-none">
+        <img
+          src={playlist?.cover}
+          alt={`Cover of ${playlist?.title}`}
+          class="object-cover w-full h-full shadow-lg"
+          transition:name=`playlist ${playlist?.id} image`
+        />
+      </picture>
+
+      <div class="flex flex-col justify-between">
+        <h2 class="flex flex-1 items-end">Playlist</h2>
+        <div>
+          <h1 class="text-5xl font-bold block text-white">
+            {playlist?.title}
+            <span transition:name=`playlist ${playlist?.id} title`></span>
+          </h1>
+        </div>
+
+        <div class="flex-1 flex items-end">
+          <div class="text-sm text-gray-300 font-normal">
+            <div transition:name=`playlist ${playlist?.id} artists`>
+              <span>{playlist?.artists.join(", ")}</span>
+            </div>
+            <p class="mt-1">
+              <span class="text-white">{playListSongs.length} canciones</span>,
+              3 h aproximadamente
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-[1]"
+    >
+    </div>
+
+    <section class="mt-4">
+      <MusicsTable client:load songs={playListSongs} playlistId={playlistId} />
+    </section>
+    <div
+      class="absolute h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+      style="--context-color:#2ee9d7"
+    >
+      <img
+        src={playlist?.cover}
+        alt="Electronic Party"
+        class="el-to-fade transition-all duration-500 absolute inset-0 mix-blend-overlay opacity-20 w-full h-full object-cover blur-md"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+      >
+      </div>
+    </div>
+  </div>
+</Layout>
