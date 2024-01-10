@@ -323,7 +323,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Never Shout Never"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "2:25",
   },
   {
     id: 2,
@@ -333,7 +333,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Oasis"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "4:39",
   },
   {
     id: 3,
@@ -343,7 +343,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["My Chemical Romance"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "4:39",
   },
   {
     id: 4,
@@ -353,7 +353,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Feid", "Ozuna"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "3:36",
   },
   {
     id: 5,
@@ -363,7 +363,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Never Shout Never"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "3:04",
   },
   {
     id: 6,
@@ -373,7 +373,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Paramore"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "4:27",
   },
   {
     id: 7,
@@ -383,7 +383,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Bad Bunny"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "2:51",
   },
   {
     id: 8,
@@ -393,7 +393,7 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["My Chemical Romance"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "3:24",
   },
   {
     id: 9,
@@ -403,6 +403,6 @@ export const songs: Song[] = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2Wo_0oZKWlNjpWFXfhpruthhiImqBNtc-A&usqp=CAU",
     artists: ["Guns N' Roses"],
     album: "Chill Lo-Fi Music",
-    duration: "4:20",
+    duration: "5:03",
   },
 ];

@@ -7,7 +7,7 @@ export function TableItem({ song, index, playlistId }) {
     setIsPlaying,
     setCurrentMusic,
     previousSong,
-    setPreviousSong,
+    setActualPlaylist,
   } = usePlayerStore((state) => state);
 
   const isSamePlaylist = playlistId == previousSong?.playlist.albumId;
@@ -22,6 +22,7 @@ export function TableItem({ song, index, playlistId }) {
           const { songs, playlist } = data;
           setIsPlaying(true);
           setCurrentMusic({ songs, playlist, song: songs[index] });
+          setActualPlaylist(playlistId);
         });
       return;
     }
@@ -40,6 +41,7 @@ export function TableItem({ song, index, playlistId }) {
         console.log(playlist.id);
         setIsPlaying(true);
         setCurrentMusic({ songs, playlist, song: songs[index] });
+        setActualPlaylist(playlistId);
       });
     return;
   };
@@ -47,7 +49,7 @@ export function TableItem({ song, index, playlistId }) {
   return (
     <tr
       key={index}
-      className="border-spacing-0 text-gray-300 text-sm font-light hover:bg-white/10 overflow-hidden transition duration-300"
+      className="border-spacing-0 text-gray-300 text-sm font-light hover:bg-white/10 overflow-hidden transition duration-300 cursor-pointer"
       onClick={handleClick}
     >
       <td className="px-4 py-2 rounded-tl-lg rounded-bl-lg w-5">{index + 1}</td>
